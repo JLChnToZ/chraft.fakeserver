@@ -17,21 +17,21 @@ This is a standalone verify server, which is used to verify the paid IDs in Mine
 - Compile the program with Mono or .NET Framework or download it.
 - Make a new XML file named ChraftMCPaidVerify.config.xml with following contents:
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <appSettings>
-    <add key="port" value="25568" />
-    <add key="motd" value="(MOTD for the server)" />
-    <add key="serverVersion" value="(Fake server version)" />
-    <add key="onlinePlayers" value="(Fake online players)"/>
-    <add key="maxPlayers" value="(Fake maximum players)"/>
-    <add key="successWebPage" value="(URL for sending verify code, place {0} for where is player name, {1} for verify code, {2} for IP address)" />
-    <add key="tokenInvalidText" value="(Token Invalid message)" />
-    <add key="connectionFailText" value="(Failed to connect to minecraft.net message)" />
-    <add key="verifyFailText" value="(Non paid player message)" />
-    <add key="successText" value="(Verify successful message, place {0} to where you want to display verify code)" />
-  </appSettings>
-</configuration>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;configuration&gt;
+  &lt;appSettings&gt;
+    &lt;add key="port" value="25568" /&gt;
+    &lt;add key="motd" value="§6Verify Paid User §7(Non play-able)" /&gt;
+    &lt;add key="serverVersion" value="1.4.7" /&gt;
+    &lt;add key="onlinePlayers" value="0"/&gt;
+    &lt;add key="maxPlayers" value="1"/&gt;
+    &lt;add key="successWebPage" value="http://example.com/verify.php?user={0}&amp;code={1}" /&gt;
+    &lt;add key="tokenInvalidText" value="§c金幣不正確." /&gt;
+    &lt;add key="connectionFailText" value="§c無法從伺服器取得驗證, 可能伺服器在維護中或是網絡問題, 請稍後再試." /&gt;
+    &lt;add key="verifyFailText" value="§c請支持正版, 謝謝." /&gt;
+    &lt;add key="successText" value="§a驗證成功. 您的驗證碼為§6§l{0}§r§a." /&gt;
+  &lt;/appSettings&gt;
+&lt;/configuration&gt;
 ```
 Please modify the values above to make it suitable for your needs.
 - Run the exe file with .NET Framework or Mono, which is the server itself.
